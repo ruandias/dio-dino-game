@@ -18,12 +18,21 @@ body {
   background-image: url(cactus.png);
 }
 
-.game-over {
+.end-game {
   text-align: center;
+}
+
+.game-over {
   color: #666;
-  margin: 50px 0;
   font-family: arial;
 }
+
+.new-game{
+	outline: none;
+	padding: 5px;
+	border-radius: 3px;
+}
+
 
 @keyframes slideright {
   from {
