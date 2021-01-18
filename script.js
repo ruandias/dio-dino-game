@@ -5,6 +5,12 @@ let isJumping = false;
 let isGameOver = false;
 let position = 0;
 
+function restartGame()
+{
+  location.reload();
+}
+
+
 function handleKeyUp(event) {
   if (event.keyCode === 32) {
     if (!isJumping) {
@@ -58,7 +64,7 @@ function createCactus() {
       // Game over
       clearInterval(leftTimer);
       isGameOver = true;
-      document.body.innerHTML = '<h1 class="game-over">Fim de jogo</h1>';
+      document.body.innerHTML = '<h1 class="game-over">Fim de jogo</h1><br><button onclick="restartGame()">New Game</button>';
     } else {
       cactusPosition -= 10;
       cactus.style.left = cactusPosition + 'px';
