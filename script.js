@@ -1,9 +1,12 @@
 const dino = document.querySelector('.dino');
 const background = document.querySelector('.background');
+const scoreBoard = document.querySelector('.score span');
+console.log(scoreBoard);
 
 let isJumping = false;
 let isGameOver = false;
 let position = 0;
+let score = 0
 
 function restartGame()
 {
@@ -64,11 +67,13 @@ function createCactus() {
       // Game over
       clearInterval(leftTimer);
       isGameOver = true;
-      document.body.innerHTML = '<div class="end-game"><h1 class="game-over">Fim de jogo</h1><br><button class="new-game" onclick="restartGame()">New Game</button></div>';
+      document.body.innerHTML = `<div class="end-game"><h1 class="game-over">GAME OVER!!!</h1><br><h2 class="game-over">YOUR SCORE = ${score}</h2><br><button class="new-game" onclick="restartGame()">New Game</button></div>`;
     } else {
       cactusPosition -= 10;
       cactus.style.left = cactusPosition + 'px';
     }
+    score++
+    scoreBoard.innerText = score
   }, 20);
 
   setTimeout(createCactus, randomTime);
