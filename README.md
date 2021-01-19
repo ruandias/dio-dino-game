@@ -1,9 +1,7 @@
+<h2 align="center">T-Rex Game Clone</h2>
 
 ![screenshot](example.jpg?raw=true "screenshot")
 ![screenshot](example2.jpg?raw=true "screenshot")
-
-<h2 align="center">T-Rex Game Clone</h2>
-
 ___
 
 
